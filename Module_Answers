@@ -1,0 +1,110 @@
+Coursera Quiz Answers for Applied Data Science Capstone All Quiz Answers
+
+Week 1 Quiz 1 >>Graded Quiz: Data Collection API with Webscraping 
+
+Q1. After you performed a GET request on the Space X API and convert the response to a dataframe using pd.json_normalize. 
+What year is located in the first row in the column static_fire_date_utc? 
+Answr: 2006 
+
+Q2. Using the API, how many Falcon 9 launches are thereafter we remove Falcon 1 launches? 
+Answer: 90 
+
+Q3. At the end of the API data collection process, how many missing values are there for the column landing pad? 
+Answer: 26 
+
+Q4. After making a request to the Falcon9 Launch Wiki page and creating a BeautifulSoup object what is the output of: soup. title 
+Answer: List of Falcon 9 and Falcon Heavy launches – Wikipedia 
+
+Quiz 2 >>Graded Quiz: Data Wrangling Quiz 
+Q1. How many launches came from CCAFS SLC 40? 
+Answer: 55 
+
+Q2. What was the success rate? 
+Answer: 67%
+
+Q3. In the lab you used the method .value_counts() to determine the number and occurrence of each orbit in the column Orbit. 
+What was the value for Orbit with the column name GTO. 
+Answer: 27 
+
+Q4. How many landing outcomes in the column landing_outcomes had a value of none. 
+Answer: 19 
+
+Week 2 Quiz 1 >>Exploratory Data Analysis using SQL Answers 
+Q1. Which of the following will retrieve the most recent date from the spacex table? 
+SELECT MAXIMUM(Date) from SPACEXTBL 
+SELECT HIGHEST(Date) from SPACEXTBL 
+SELECT DATE FROM SPACEXTBL 
+WHERE DATE=MAX(DATE) 
+SELECT max(Date) from SPACEXTBL 
+
+Q2. Which of the following queries display the minimum payload mass? 
+
+Data Science Tutorials For Beginners – Part 1 (Introduction) | Tech Tian 
+select payload_mass__kg_ from SPACEXTBL 
+order by payload_mass__kg_ group by booster_version 
+LIMIT 1 
+select payload_mass__kg_ from SPACEXTBL 
+order by payload_mass__kg_ desc 
+LIMIT 1 select min(payload_mass__kg_) from SPACEXTBL 
+select payload_mass__kg_ from SPACEXTBL where payload_mass__kg_=(select max(payload_mass__kg_) from SPACEXTBL) 
+LIMIT 1 
+
+Q3. You are writing a query that will give you the total payload_mass_kg carried by the booster versions. 
+The mass should be stored in the mass column. You want the result column to be called “Total_Payload_Mass”. 
+Which of the following SQL queries is correct? 
+Answer: SELECT sum(PAYLOAD_MASS__KG_) as Total_Payload_Mass from SPACEXTBL 
+
+Q4. Which of the following query to display 5 records launched on Friday? 
+SELECT * FROM SPACEXTBL where DAYNAME(DATE)=’Friday’ 
+LIMIT 5 
+SELECT * FROM SPACEXTBL where DAY(DATE)=’Friday’ 
+LIMIT 5 
+
+Q5. What are the unique launch sites mentioned in the Spacex table? 
+CCAS LC-40,KSC LC-39A CCAFS LC-40,KSC LC-39B CCAFS LC-40,KSC LC-39A None of the Above
+
+Quiz 2 >>Exploratory Data Analysis for Data Visualization 
+Q1. What type of data does a Bar Chart best represent? 
+Location Data Numerical Categorical None of the above 
+
+Q2. What are the total number of columns in the features dataframe after applying one hot encoding to columns Orbits, 
+LaunchSite, LandingPad and Serial . Here the features dataframe consists of the following columns FlightNumber’, 
+‘PayloadMass’, ‘Orbit’, ‘LaunchSite’, ‘Flights’, ‘GridFins’, ‘Reused’, ‘Legs’, ‘LandingPad’, ‘Block’, ‘ReusedCount’, 
+‘Serial’ Q3. The catplot code to show the scatterplot of FlightNumber vs LaunchSite with x as FlightNumber, 
+and y to Launch Site and hue to ‘Class’ is sns.catplot(y=”LaunchSite”,x=”FlightNumber”,hue=”Class”, data=df, 
+aspect = 1,kind=’cat’) plt.ylabel(“Launch Site”,fontsize=15) plt.xlabel(“Flight Number”,fontsize=15) 
+plt.show() sns.catplot(y=”LaunchSite”,x=”FlightNumber”,hue=”Class”, data=df, aspect = 1) 
+plt.ylabel(“Launch Site”,fontsize=15) plt.xlabel(“Flight Number”,fontsize=15) 
+plt.show() sns.catplot(y=”LaunchSite”,x=”FlightNumber”,hue=”Class”, data=df, aspect = 1,kind=’scatter’)
+plt.ylabel(“Launch Site”,fontsize=15)plt.xlabel(“Flight Number”,fontsize=15)
+plt.show() sns.catplot(y=”LaunchSite”,x=”FlightNumber”,hue=”Class”, col=”Class”, data=df, aspect = 1) 
+plt.ylabel(“Launch Site”,fontsize=15) plt.xlabel(“Flight Number”,fontsize=15) 
+plt.show() 
+
+Week 3 Quiz 1 >>Graded Quiz: Interactive Visual Analytics and Dashboard 
+Q1. How can you add marking objects such as circles, markers, or lines on a Folium map? (Click all choices that apply) 
+add_node(map, object) map.add_child(object) map.add_to(object) object.add_to(map) 
+
+Q2. If you want to add multiple markers with similar coordinates on the Folium map, which Folium plugin you should use? 
+MarkerCluster MarkerGroup MarkerContainer Markers should be add to map directly without any extra layer 
+
+Q3. Which attribute is used to provide available selections (such as a list of launch sites) for a Plotly DropDown input? 
+input values placeholder options
+
+Q4. How can we associate the result of a callback function (like a Ploty figure) to an element defined in the application 
+layout Using a unique component id Dash automatically render the result of a callback function Using component name 
+
+Q5. Can we add multiple input components to a dash callback function 
+
+Week 4 Quiz 1 >>Graded Quiz: Predictive Analysisis Answers 
+Q1. How many records were there in the test sample? 
+Answer: 18 
+
+Q2. For Support Vector Machines, what kernel has the best result on the validation dataset 
+
+Q3. After selecting the best hyperparameters for the decision tree classifier using the validation data, 
+what was the accuracy achieved on the test data Disclaimers: 
+
+
+I hope this article would be helpful for you to find all the coursera Quiz Answers.If this article helped you learn something 
+new for free, let others know about this,Want to learn more? Check out another course..
